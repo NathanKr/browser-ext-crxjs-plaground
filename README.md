@@ -8,7 +8,7 @@ follow <a href='https://crxjs.dev/vite-plugin/getting-started/vanilla-js/create-
 
 choose typescript
 ```
-npm i vite@latest
+npm init vite@latest
 ```
 
 </li>
