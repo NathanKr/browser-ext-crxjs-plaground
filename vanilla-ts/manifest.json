@@ -6,7 +6,9 @@
   "content_scripts": [
     {
       "js": ["src/content.ts"],
-      "matches": ["https://www.google.com/*"]
+      "matches": [
+        "https://www.google.com/*"
+      ]
     }
   ]
 }

@@ -80,14 +80,25 @@ continue with <a href='https://crxjs.dev/vite-plugin/getting-started/vanilla-js/
 <li>create src/content.ts
 
 ```
+import src from './lion-3576045_640.jpg'
+import './content.css'
+
 console.log('content.ts');
 console.log(new Date());
 
+const html = `
+<div class="crx">
+  <img src="${chrome.runtime.getURL(src)}" />
+</div>
+`
+
+const doc = new DOMParser().parseFromString(html, 'text/html')
+document.body.append(doc.body.firstElementChild!)
 
 ```
 
 </li>
 
-<li>navigate to www.google.com and see 'content.ts' and time in the console. no need to make any reload !!!!!!!!!!!</li>
+<li>navigate to www.google.com and see 'content.ts' and time in the console. check in google.com page bottom left and you will see the image !!!!!!!! no need to make any reload !!!!!!!!!!!</li>
 
 </ol>
