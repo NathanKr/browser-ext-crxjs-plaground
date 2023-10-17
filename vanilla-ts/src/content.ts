@@ -7,6 +7,7 @@ console.log(new Date());
 const html = `
 <div class="crx">
   <img src="${chrome.runtime.getURL(src)}" />
+  <h1>Nathan Krasney</h1>
 </div>
 `
 
