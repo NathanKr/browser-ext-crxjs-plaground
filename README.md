@@ -5,7 +5,7 @@ Build a browser extension project with crxjs and use messages
 
 
 
-<h3>create project and show popup</h3>
+<h3>Create project and show popup</h3>
 follow <a href='https://crxjs.dev/vite-plugin/getting-started/vanilla-js/create-project'>this guide</a>
 <ol>
 <li>
@@ -47,6 +47,7 @@ remark : the server part was added due to an error 'Uncaught (in promise) Syntax
 
 
 <li>
+invoke the following if the development server is not running
 
 ```
 npm run dev
@@ -57,7 +58,7 @@ npm run dev
 <li>change ts or css file and it will update instantly on the extension popup. This is called HMR</li>
 </ol>
 
-<h3>add content script</h3>
+<h3>Add content script</h3>
 continue with <a href='https://crxjs.dev/vite-plugin/getting-started/vanilla-js/add-content-script'>this guide</a>
 
 <ol>
@@ -101,4 +102,61 @@ document.body.append(doc.body.firstElementChild!)
 
 <li>navigate to www.google.com and see 'content.ts' and time in the console. check in google.com page bottom left and you will see the image !!!!!!!! no need to make any reload !!!!!!!!!!!</li>
 
+<li>
+invoke the following if the development server is not running
+
+```
+npm run dev
+```
+
+</li>
+<li>check in google.com for the text 'Nathan Krasney - watch the lion image below' and lion image below</li>
+</ol>
+
+
+<h3>Add extension background</h3>
+
+<ol>
+<li>
+add to manifest.json
+
+```
+{
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  }
+}
+```
+</li>
+
+<li>add src/background.ts
+
+```
+console.log('background.ts');
+console.log(new Date());
+
+```
+
+</li>
+
+<li>
+invoke the following if the development server is not running
+
+```
+npm run dev
+```
+
+</li>
+<li>navigate to the extension page : click refresh icon and "service worker"
+
+![image](./vanilla-ts/figs/background-console.png)
+
+
+and you will see the console.log
+
+![image](./vanilla-ts/figs/background-console-output.png)
+
+
+</li>
 </ol>
