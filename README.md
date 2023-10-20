@@ -3,8 +3,6 @@ Build a browser extension project with crxjs and use messages
 
 <h2>vanilla-ts</h2>
 
-
-
 <h3>Create project and show popup</h3>
 follow <a href='https://crxjs.dev/vite-plugin/getting-started/vanilla-js/create-project'>this guide</a>
 <ol>
@@ -160,3 +158,9 @@ and you will see the console.log
 
 </li>
 </ol>
+
+
+<h2>Hot Module Reload - HMR</h2>
+<ul>
+<li>You get HMR on change css and js in the extension while using 'npm run dev'</li><li>If you want to use it whith out HMR you need to create dist via 'npm run build'</li>
+</ul>
