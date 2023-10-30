@@ -164,3 +164,9 @@ and you will see the console.log
 <ul>
 <li>You get HMR on change css and js in the extension while using 'npm run dev'</li><li>If you want to use it whith out HMR you need to create dist via 'npm run build'</li>
 </ul>
+
+
+<h2>Open issues</h2>
+<ul>
+<li>HMR is not working when background script is changing</li>
+</ul>
